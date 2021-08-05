@@ -110,3 +110,9 @@ button {
 .emoji {
   font-size: 40px;
 }
+#code-link {
+  color: black;
+  position: absolute;
+  left: 120px;
+  bottom: -515px;
+}
