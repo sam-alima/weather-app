@@ -1,0 +1,112 @@
+body {
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  background: #fff;
+}
+.container {
+  margin: 70px auto 80px;
+  text-align: center;
+  background: linear-gradient(to top, #9890e3 0%, #b1f4cf 100%);
+  border: 1px solid transparent;
+  border-radius: 20px;
+  box-shadow: 5px 5px 40px white;
+}
+img {
+  width: 100%;
+  height: 800px;
+  display: block;
+  margin: 20px auto auto;
+  border-radius: 20px;
+  opacity: 0.6;
+  box-shadow: 5px 5px 40px white;
+}
+.navbar {
+  position: absolute;
+  top: 100px;
+  left: 130px;
+  opacity: 0.6px;
+}
+
+.form {
+  text-align: center;
+  background: #eaf4f7;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+#submit-button {
+  background: #eaf4f7;
+  border: none;
+  border-radius: 15px;
+  padding: 10px;
+}
+
+button {
+  position: absolute;
+  top: 100px;
+  left: 400px;
+  opacity: 0.6px;
+  text-align: center;
+  background: #eaf4f7;
+  border: none;
+  border-radius: 15px;
+  padding: 12px;
+}
+
+.col-1 {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 30px;
+  margin: auto;
+  border: 2px solid #fff;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 5px 5px 10px white;
+}
+.main-temp {
+  text-align: center;
+  font-size: 90px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+.gen-info {
+  text-transform: capitalize;
+  text-align: left;
+  font-size: 20px;
+  font-weight: lighter;
+  margin: 0 auto 20px 60px;
+}
+.city-name {
+  position: absolute;
+  right: 150px;
+  bottom: 580px;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.metric-temp {
+  font-size: 35px;
+  color: #fff;
+  position: relative;
+  bottom: 50px;
+}
+.forecast-head {
+  font-size: 30px;
+  margin-top: 10px;
+}
+.max-temp {
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.min-temp {
+  font-weight: lighter;
+  font-size: 25px;
+  margin-top: -10;
+}
+
+.emoji {
+  font-size: 40px;
+}
