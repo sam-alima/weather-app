@@ -21,6 +21,18 @@ hr {
   margin: 20px auto;
   color: #b6e1e0;
 }
+footer {
+  font-size: 14px;
+  margin-top: 40px;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(39, 33, 66, 0.4);
+}
+
+footer a {
+  text-decoration: none;
+  color: #53a8b6;
+}
 #submit-button {
   position: relative;
   width: 100%;
