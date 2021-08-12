@@ -37,63 +37,25 @@
         <input type="submit" value="🔎" />
       </form>
       <button>Current Location</button>
-      <div class="city-name">
-        <i class="fas fa-map-pin pin"></i>
-        <span id="searched-city"></span>
-        <span class="max-temp" id="max-temp-searched-city"></span> /
-        <span class="min-temp" id="min-temp-searched-city"></span>
-      </div>
+      <h1 class="city-name" id="searched-city"></h1>
+      <ul>
+        <li>
+          <span class="max-temp" id="max-temp-searched-city"></span> /
+          <span class="min-temp" id="min-temp-searched-city"></span>
+        </li>
+        <li class="gen-info" id="current-date"></li>
+        <li class="gen-info" id="sky"></li>
+      </ul>
       <div class="row">
-        <div class="col-4 main-temp">
-          <span id="current-temp"></span>
-          ☀
-          <div class="gen-info" id="current-date"></div>
-          <div class="gen-info" id="sky"></div>
-          <div class="gen-info" id="humidity"></div>
-          <div class="gen-info" id="wind-speed"></div>
-        </div>
-        <div class="col-1">
-          FRI<br />
-          <div class="emoji">☀</div>
-          <span class="max-temp">21°C</span>
-          <br />
-          <span class="min-temp">15°C</span>
-        </div>
-        <div class="col-1">
-          SAT<br />
-          <div class="emoji">☁</div>
-          <span class="max-temp">19°C</span>
-          <br />
-          <span class="min-temp">11°C</span>
-        </div>
-        <div class="col-1">
-          SUN<br />
-          <div class="emoji">🌤</div>
-          <span class="max-temp">19°C</span>
-          <br />
-          <span class="min-temp">12°C</span>
-        </div>
-        <div class="col-1">
-          MON<br />
-          <div class="emoji">☀</div>
-          <span class="max-temp">20°C</span>
-          <br />
-          <span class="min-temp">18°C</span>
-        </div>
-        <div class="col-1">
-          TUE<br />
-          <div class="emoji">🌧</div>
-          <span class="max-temp">16°C</span>
-          <br />
-          <span class="min-temp">9°C</span>
-        </div>
-        <div class="col-1">
-          WED<br />
-          <div class="emoji">🌦</div>
-          <span class="max-temp">18°C</span>
-          <br />
-          <span class="min-temp">10°C</span>
-        </div>
+        <div class= "col-6">
+          ☀ 
+          <div id="current-temp"></div>
+          </div>
+          <div class= "col-6">
+        <ul>
+          <li class="gen-info" id="humidity"></li>
+          <li class="gen-info" id="wind-speed"></li>
+        </ul>
       </div>
     </div>
     <p id="code-link">
