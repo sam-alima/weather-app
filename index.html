@@ -26,43 +26,68 @@
   </head>
   <body>
     <div class="container">
-      <div class= "weather-app">
-      <form class="navbar" id="submit-button">
-        <input
-          type="form"
-          placeholder="Insert your city here"
-          autocomplete="off"
-          autofocus="on"
-          id="search-text-input"
-        />
-        <input type="submit" value="🔎" />
-      </form>
-      <button>Current Location</button>
-      <h1 class="city-name" id="searched-city"></h1>
-      <ul>
-        <li>
-          <span class="max-temp" id="max-temp-searched-city"></span> /
-          <span class="min-temp" id="min-temp-searched-city"></span>
-        </li>
-        <li class="gen-info" id="current-date"></li>
-        <li class="gen-info" id="sky"></li>
-      </ul>
-      <div class="row">
-        <div class= "col-6">
-          ☀ 
-          <div id="current-temp"></div>
+      <div class="weather-app">
+        <div class="overview">
+          <form id="submit-button">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Type a city here..."
+                  class="navbar"
+                  autocomplete="off"
+                  autofocus="on"
+                  id="search-text-input"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  class="btn btn-primary w-100"
+                  value="Search"
+                />
+              </div>
+            </div>
+          </form>
+          <hr />
+          <button>Current Location</button>
+          <div class="weatherInfo">
+            <div class="row">
+              <div class="col-6">
+                <h1 class="city-name" id="searched-city"></h1>
+                <ul>
+                  <li>
+                    <span class="max-temp" id="max-temp-searched-city"></span> /
+                    <span class="min-temp" id="min-temp-searched-city"></span>
+                  </li>
+                  <li>
+                    <span class="gen-info" id="current-date"></span>,
+                    <span class="gen-info" id="sky"></span>
+                  </li>
+                  <li>
+                    <span class="gen-info" id="humidity"></span>,
+                    <span class="gen-info" id="wind-speed"></span>
+                  </li>
+                </ul>
+              </div>
+            <div class="col-6">
+              <div class="temperature-container d-flex justify-content-end">
+                ☀
+                <span class="float-left" id="current-temp"></span>
+              </div>
+            </div>
           </div>
-          <div class= "col-6">
-        <ul>
-          <li class="gen-info" id="humidity"></li>
-          <li class="gen-info" id="wind-speed"></li>
-        </ul>
+          <footer>
+            <hr/>
+          <small id="code-link">
+            <a href="https://github.com/sam-alima/weather-app" target="_blank"
+              >Open-source code</a
+            >
+            by Samira Lima
+          </small>
+          </footer>
+        </div>
       </div>
-    <small id="code-link">
-      <a href="https://github.com/sam-alima/weather-app" target="_blank">Open-source code</a> by
-      Samira Lima
-    </small>
-    </div>
     </div>
     <script src="src/script.js"></script>
   </body>

@@ -2,14 +2,7 @@ body {
   font-family: "Nunito", sans-serif;
   background: #f9f7fe;
 }
-.weather-app {
-  max-width: 600px;
-  margin: 30px auto;
-  padding: 20px;
-  border: 1px solid #dadde1;
-  border-radius: 5px;
-  background: #fff;
-}
+
 h1 {
   color: #878787;
   font-size: 24px;
@@ -29,6 +22,19 @@ li {
   line-height: 19px;
   margin: 0;
   padding: 0;
+}
+
+.weather-app {
+  max-width: 600px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #dadde1;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.overview {
+  margin-bottom: 20px;
 }
 
 .navbar {
