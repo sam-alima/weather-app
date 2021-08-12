@@ -37,6 +37,11 @@ footer a {
   text-decoration: none;
   color: #ff895d;
 }
+
+a {
+  text-decoration: none;
+  color: #ff895d;
+}
 #submit-button {
   position: relative;
   width: 100%;
@@ -96,6 +101,17 @@ li:first-letter {
   font-weight: 700;
   font-size: 70px;
 }
+
+.temperature-container .active {
+  color: #212121;
+  text-decoration: none;
+  cursor: default;
+}
+
+.temperature-container .active:hover {
+  text-decoration: none;
+}
+
 .metrics {
   color: rgba(39, 33, 66, 0.4);
   margin-left: 10px;
@@ -104,4 +120,5 @@ li:first-letter {
   font-weight: 400;
   position: relative;
   top: 20px;
+  left: -10px;
 }
