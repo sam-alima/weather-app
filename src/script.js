@@ -37,7 +37,7 @@ function showTemperature(response) {
   let displayHumidity = document.querySelector("#humidity");
   let displayWindSpeed = document.querySelector("#wind-speed");
   displayCity.innerHTML = `${searchedCity}`;
-  displayMainTemperature.innerHTML = `${mainTemperature}°C`;
+  displayMainTemperature.innerHTML = `${mainTemperature}`;
   displayMaxTemperature.innerHTML = `Max ${maxTemperature}°C`;
   displayMinTemperature.innerHTML = `Min ${minTemperature}°C`;
   description.innerHTML = `${sky}`;

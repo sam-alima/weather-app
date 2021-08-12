@@ -27,16 +27,15 @@
   <body>
     <div class="container">
       <div class="weather-app">
-        <div class="overview">
+        <div class="head">
           <form id="submit-button">
             <div class="row">
               <div class="col-9">
                 <input
                   type="search"
-                  placeholder="Type a city here..."
-                  class="navbar"
+                  placeholder="Enter a city..."
+                  class="form-control search-input"
                   autocomplete="off"
-                  autofocus="on"
                   id="search-text-input"
                 />
               </div>
@@ -47,10 +46,9 @@
                   value="Search"
                 />
               </div>
-            </div>
           </form>
+          </div>
           <hr />
-          <button>Current Location</button>
           <div class="weatherInfo">
             <div class="row">
               <div class="col-6">
@@ -74,7 +72,11 @@
               <div class="temperature-container d-flex justify-content-end">
                 ☀
                 <span class="float-left" id="current-temp"></span>
-              </div>
+                <span class="metrics">
+                  <span class="metric" id="celsius-temperature">°C</span> 
+                  |
+                  <span class="metric" id="fahrenheit-temperature">°F</span>
+                </span>
             </div>
           </div>
           <footer>
