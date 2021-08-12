@@ -23,7 +23,6 @@ function reloadDate(timestamp) {
 }
 
 function showTemperature(response) {
-  console.log(response.data);
   let mainTemperature = Math.round(response.data.main.temp);
   let maxTemperature = Math.round(response.data.main.temp_max);
   let minTemperature = Math.round(response.data.main.temp_min);
