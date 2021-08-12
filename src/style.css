@@ -11,19 +11,8 @@ body {
   border-radius: 20px;
   box-shadow: 5px 5px 40px white;
 }
-img {
-  width: 100%;
-  height: 800px;
-  display: block;
-  margin: 20px auto auto;
-  border-radius: 20px;
-  opacity: 0.6;
-  box-shadow: 5px 5px 40px white;
-}
+
 .navbar {
-  position: absolute;
-  top: 100px;
-  left: 130px;
   opacity: 0.6px;
 }
 
