@@ -30,6 +30,9 @@ function showTemperature(response) {
   let sky = response.data.weather[0].main;
   let humidity = response.data.main.humidity;
   let windSpeed = Math.round(response.data.wind.speed);
+
+  celsiusTemperature = response.data.main.temp;
+
   let displayCity = document.querySelector("#searched-city");
   let displayMainTemperature = document.querySelector("#current-temp");
   let displayMaxTemperature = document.querySelector("#max-temp-searched-city");
@@ -66,7 +69,29 @@ function handleSubmit(event) {
   let city = document.querySelector("#search-text-input").value;
   searchedCity(city);
 }
+
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temp");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current-temp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
 let form = document.querySelector("#submit-button");
 form.addEventListener("submit", handleSubmit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-temperature");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-temperature");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 searchedCity("Edinburgh");
