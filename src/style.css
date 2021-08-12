@@ -27,6 +27,9 @@ hr {
   padding: 20px;
   margin-bottom: 20px;
 }
+li:first-letter {
+  text-transform: capitalize;
+}
 
 .weather-app {
   max-width: 700px;

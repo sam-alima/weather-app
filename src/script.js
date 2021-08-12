@@ -1,6 +1,5 @@
-let now = new Date();
-
-function reloadDate(date) {
+function reloadDate(timestamp) {
+  let now = new Date(timestamp);
   let days = [
     "Sunday",
     "Monday",
@@ -10,16 +9,19 @@ function reloadDate(date) {
     "Friday",
     "Saturday",
   ];
-  let hour = date.getHours();
-  let minutes = date.getMinutes();
-  let day = days[date.getDay()];
+  let day = days[now.getDay()];
+  let hour = now.getHours();
+  if (hour < 10) {
+    hour = `0${hour}`;
+  }
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
 
-  let formattedDate = `${day}, ${hour}:${minutes}`;
-  return formattedDate;
+  return `${day}, ${hour}:${minutes}`;
 }
-let currentTime = document.querySelector("#current-date");
-currentTime.innerHTML = reloadDate(now);
-//
+
 function showTemperature(response) {
   console.log(response.data);
   let mainTemperature = Math.round(response.data.main.temp);
@@ -36,6 +38,7 @@ function showTemperature(response) {
   let description = document.querySelector("#sky");
   let displayHumidity = document.querySelector("#humidity");
   let displayWindSpeed = document.querySelector("#wind-speed");
+  let displayCurrentDate = document.querySelector("#current-date");
   displayCity.innerHTML = `${searchedCity}`;
   displayMainTemperature.innerHTML = `${mainTemperature}`;
   displayMaxTemperature.innerHTML = `Max ${maxTemperature}°C`;
@@ -43,6 +46,7 @@ function showTemperature(response) {
   description.innerHTML = `${sky}`;
   displayHumidity.innerHTML = `Humidity: ${humidity}%`;
   displayWindSpeed.innerHTML = `Wind Speed: ${windSpeed}km/h`;
+  displayCurrentDate.innerHTML = reloadDate(response.data.dt * 1000);
 }
 
 function searchedCity(city) {
@@ -62,21 +66,3 @@ let form = document.querySelector("#submit-button");
 form.addEventListener("submit", handleSubmit);
 
 searchedCity("Edinburgh");
-
-//
-function showPosition(position) {
-  let latitude = position.coords.latitude;
-  let longitude = position.coords.longitude;
-  let units = "metric";
-  let apiKey = "28cb46b69606bec80c014881bb5a9afa";
-  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${units}`;
-
-  axios.get(apiUrl).then(showTemperature);
-}
-function getCurrentPosition(event) {
-  event.preventDefault();
-  navigator.geolocation.getCurrentPosition(showPosition);
-}
-
-let button = document.querySelector("button");
-button.addEventListener("click", getCurrentPosition);
