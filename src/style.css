@@ -1,6 +1,10 @@
 body {
   font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
-  background: linear-gradient(-225deg, #e3fdf5 0%, #ffe6fa 100%);
+  background: linear-gradient(
+    91.3deg,
+    rgb(135, 174, 220) 1.5%,
+    rgb(255, 255, 255) 100.3%
+  );
 }
 
 h1 {
@@ -31,7 +35,7 @@ footer {
 
 footer a {
   text-decoration: none;
-  color: #53a8b6;
+  color: #ff895d;
 }
 #submit-button {
   position: relative;
@@ -67,7 +71,7 @@ li:first-letter {
 
 .btn-primary {
   color: #fff;
-  background: #53a8b6;
+  background: #005689;
   font-weight: 700;
   font-size: 16px;
   padding: 15px;
