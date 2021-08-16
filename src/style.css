@@ -109,6 +109,7 @@ li:first-letter {
 }
 
 .metrics {
+  display: block;
   color: rgba(39, 33, 66, 0.4);
   margin-left: 10px;
   font-size: 20px;
